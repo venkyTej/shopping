@@ -1,3 +1,45 @@
-body{
-    background-color: rgb(205, 219, 11);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: azure;
+}
+
+
+body {
+    header#site-header {
+        height: 20px;
+
+    }
+    main {
+        margin: auto;
+        margin-top: 60px;
+        max-width: 80%;
+
+        /* home page */
+        .container {
+            .row {
+                .card {
+                    height: 300px;
+                    display: flex;
+                    align-items: center;
+                    .row {
+                        height: 50%;
+                        img {
+                            height: 100%;
+                            background-color: black;
+                        }
+                        
+                    }
+                    a.btn {
+                        font-size: smaller;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+
+        /* about page */
+    }
+    
 }
