@@ -8,7 +8,7 @@
 
 body {
     header#site-header {
-        height: 20px;
+        height: 25px;
 
     }
     main {
@@ -20,20 +20,31 @@ body {
         .container {
             .row {
                 .card {
-                    height: 300px;
+                    height: 350px;
                     display: flex;
                     align-items: center;
+                    border-radius: 6%;
                     .row {
                         height: 50%;
                         img {
                             height: 100%;
-                            background-color: black;
+                            background-color: rgb(55, 118, 169);
+                            color:beige;
+                            border-radius: 6%;
+                            
+                        }
+                        .card-caption {
+                            font-size: 80%;
+
                         }
                         
                     }
                     a.btn {
                         font-size: smaller;
                         margin-bottom: 5px;
+                        background-color: rgb(153, 207, 37);
+                        color: rgb(13, 13, 16);
+                        border:  black;
                     }
                 }
             }
