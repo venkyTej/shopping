@@ -27,10 +27,12 @@ body {
                     .row {
                         height: 50%;
                         img {
-                            height: 100%;
-                            background-color: rgb(55, 118, 169);
+                            height: 150px;
+                            width: 300px;
+                            background-color: rgb(3, 19, 32);
                             color:beige;
                             border-radius: 6%;
+
                             
                         }
                         .card-caption {
@@ -44,7 +46,12 @@ body {
                         margin-bottom: 5px;
                         background-color: rgb(153, 207, 37);
                         color: rgb(13, 13, 16);
-                        border:  black;
+                        border:  2px solid black;
+                        overflow: none;
+
+                    }
+                    .btn:hover {
+                        background-color: rgb(143, 133, 147);
                     }
                 }
             }
