@@ -2,7 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: azure;
+    background-color:rgb(138, 140, 172)
+    
+    
 }
 
 
@@ -24,14 +26,20 @@ body {
                     display: flex;
                     align-items: center;
                     border-radius: 6%;
+                    margin-bottom: 2%;
+                    background-color:rgb(26, 25, 25);
+                    color:black;
+                    border: 2px solid black;
+
                     .row {
                         height: 50%;
                         img {
-                            height: 150px;
+                            height: 120px;
                             width: 300px;
                             background-color: rgb(3, 19, 32);
-                            color:beige;
+                            color:rgb(184, 184, 111);
                             border-radius: 6%;
+                            
 
                             
                         }
@@ -48,10 +56,12 @@ body {
                         color: rgb(13, 13, 16);
                         border:  2px solid black;
                         overflow: none;
+                        margin-top: 20px;
 
                     }
-                    .btn:hover {
-                        background-color: rgb(143, 133, 147);
+                    .btn:active {
+                        background-color: rgb(33, 32, 32);
+                        color: aliceblue;
                     }
                 }
             }
