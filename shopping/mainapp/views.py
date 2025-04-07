@@ -21,7 +21,7 @@ def home(request):
     }
     return HttpResponse(template.render(context, request))
 
-class productDetails(DeleteView):
+class productDetails(DetailView):
     model = Product
     template_name = 'product_details.html'
 
@@ -55,7 +55,7 @@ class EditProduct(UpdateView):
     success_url = '/'
 
 # d -- delete the product-----
-class DeleteProduct(UpdateView):
+class DeleteProduct(DeleteView):
     model = Product
     template_name = 'delete_product.html'
     success_url = '/'

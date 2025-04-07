@@ -43,10 +43,23 @@ body {
 
                             
                         }
+                        a{
+                            text-decoration: none;
+                            color: black;
+
+
+                        }
+                        a:hover{
+                            color:rgb(78, 9, 181);
+                            text-decoration: underline rgb(212, 209, 207);
+                    
+                        }
+                        
                         .card-caption {
                             font-size: 80%;
 
                         }
+                        
                         
                     }
                     a.btn {
