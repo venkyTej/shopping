@@ -30,6 +30,8 @@ body {
                     background-color:rgb(26, 25, 25);
                     color:black;
                     border: 2px solid black;
+                    
+                    
 
                     .row {
                         height: 50%;
@@ -83,4 +85,13 @@ body {
         /* about page */
     }
     
+}
+.del{
+    color: rgb(18, 27, 34);
+    background-color: rgb(238, 226, 226);
+    width: 200px;
+    border-radius: 4px solid black;
+    size: 20px;
+
+
 }

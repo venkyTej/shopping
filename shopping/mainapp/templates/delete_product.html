@@ -6,11 +6,11 @@ delete product
 {% block content %}
 
 
-<div>
+<div class="del">
     <form method="post" class="form-control">
         {% csrf_token %}
         {{form.as_p}}
-        <button type="submit" class="btn btn-denger">Delete</button>
+        <button type="submit" class="btn btn-danger">Delete</button>
     </form>
 </div>
 
