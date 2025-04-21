@@ -1,15 +1,14 @@
 {% extends 'base.html' %}
-<!---this is title of the project-->
+
 {% block title %}
- COFFEE-SHOP 
+ COFFEE-SHOP
 {% endblock %}
-<!--End project Title-->
 
 {% block content %}
-<!---this is  information of cards -->
- {% comment %}
-This is my home page !!!
 
+<!-- The home page -->
+
+{% comment %}
 <ol>
     {% for product in products %}
     
@@ -18,31 +17,32 @@ This is my home page !!!
     {% endfor %}
 </ol>
 {% endcomment %}
-<!--End comment-->
 
- 
-
-<div class="container">
+<div class="container z-0">
     <div class="row">
         {% for product in products %}
         <div class="col-sm-2 card text-center shadow-sm mx-3">
-            <div class="row h-50">
+            <div class="row">
                 <img class="card-img-top" src="{{product.img.url}}" alt="Picture of {{product.name}}">
             </div>
-            <div class="row card-body h-50">
-    
-        <a href="{% url 'prod_details' product.pk %}"><h6>{{product.name}}</h6></a>
+            <div class="row card-body">
+                <h5>
+                    <a href="{% url 'prod_details' product.pk %}">
+                        {{product.name}}
+                    </a>
+                </h5>
                 <p class="card-text">
                     Rs. {{product.price}}
                 </p>
                 <p class="card-caption">
                     {{product.desc}}
                 </p>
-            </div class="">
-            <a href="" class="btn btn-primary w-60 center  ">Add to Cart</a>
+            </div>
+            <a href="{% url 'add_to_cart' product.pk %}" class="btn btn-primary w-60 center ">Add to Cart</a>
         </div>
         {% endfor %}
     </div>
+
 </div>
 
 {% endblock %}

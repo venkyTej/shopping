@@ -34,21 +34,23 @@
                 </td>
                 <td>{{item.get_total}}</td>
                 <td>
-                    <a href="" class="btn btn-danger">Remove</a>
+                    <a href="{% url 'rem_from_cart' item.id %}" class="btn btn-danger">Remove</a>
                 </td>
             </tr>
             {% endfor %}
         </tbody>
         <tfoot>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <th>Total:</th>
                 <td>
-                    <a href="" class="btn btn-info">Place your Order</a>
+                    <a href="{% url 'homepage' %}" class="btn btn-outline-success">Shop More</a>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <th>Total: {{total}}</th>
+                <td>
+                    <a href="" class="btn btn-info"> Order your coffee</a>
                 </td>
             </tr>
         </tfoot>

@@ -2,15 +2,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color:rgb(172, 172, 174)
-    
-    
+    background-color:rgb(172, 172, 174);
+   
 }
 
 
 body {
     header#site-header {
-        height: 25px;
+        height: 10px;
+     position: absolute;
+     left: 0px;
+     top: 0px;
+     text-shadow: 5px black;
+     
+     
+
 
     }
     main {
@@ -30,6 +36,10 @@ body {
                     background-color:rgb(26, 25, 25);
                     color:black;
                     border: 2px solid black;
+                    overflow: hidden;
+                    
+                    
+
                     
                     
 
@@ -37,10 +47,11 @@ body {
                         height: 50%;
                         img {
                             height: 120px;
-                            width: 300px;
+                            width: 390px;
                             background-color: rgb(3, 19, 32);
                             color:rgb(184, 184, 111);
                             border-radius: 6%;
+                            overflow: hidden;
                             
 
                             
