@@ -84,3 +84,5 @@ def remQuantity(request, cart_item_id):
             'overall_total': overall_total
             }
         return JsonResponse(context)
+
+        

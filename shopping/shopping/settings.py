@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'mainapp',
     'authentication',
     'cart',
+    'orders',
+    'payments',
+    
 ]
 
 MIDDLEWARE = [
@@ -137,3 +140,18 @@ LOGIN_URL = 'signin'
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+# RAZORPAY configs-----
+  
+
+RAZORPAY_KEY_ID = "rzp_test_yVaCkW7eETP4Gn" # this is razorpay KEY-ID
+RAZORPAY_KEY_SECRET = "eimyDEYls5SDwsuAyHjOxDYZ" # this is razorpay KEY-SECERET
+
+CSRF_TRUSTEED_ORIGINS = [
+    "https://api.razorpay.com" #here added razorpay domain's
+]
+
+ 
+TIME_ZONE = "asia/banglore" # this is  our local time zone 
+USE_TZ = True
+
