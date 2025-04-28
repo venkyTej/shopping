@@ -152,6 +152,6 @@ CSRF_TRUSTEED_ORIGINS = [
 ]
 
  
-TIME_ZONE = "asia/banglore" # this is  our local time zone 
+TIME_ZONE = 'Asia/Kolkata'  # Change to your local time zone
 USE_TZ = True
 
