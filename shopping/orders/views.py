@@ -1,6 +1,3 @@
-from django.shortcuts import render
-
-# Create your views here.
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from django.utils.timezone import now
@@ -55,6 +52,13 @@ def order_history(request):
     orders = Order.objects.filter(user=request.user).prefetch_related('order_details').order_by('-order_date')
     return render(request, 'order_history.html', {'orders': orders})
 
+# the below view is just another version of the previous view to try out a different appearance
+@login_required
+def order_history_2(request):
+    """Display the order history of the user."""
+    orders = Order.objects.filter(user=request.user).prefetch_related('order_details').order_by('-order_date')
+    return render(request, 'order_history_2.html', {'orders': orders})
+
 @login_required
 def order_detail(request, order_id):
     """Display details of a specific order."""
@@ -89,6 +93,11 @@ def select_address_for_order(request, order_id):
     if request.method == 'POST':
         # Get the selected address ID from the form
         address_id = request.POST.get('address')
+
+        # redirect back to the same page if no address is selected
+        if not address_id:
+            return redirect('select_address_for_order', order_id=order.id)
+
         address = get_object_or_404(Address, id=address_id, user=request.user)
         
         # Associate the selected address with the order
