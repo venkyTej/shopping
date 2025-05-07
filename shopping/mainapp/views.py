@@ -15,7 +15,8 @@ from .models import Product
 def home(request):
     template = loader.get_template('home.html')
     context = {
-        'products' : Product.objects.all() # HERE 'P' product is capital because product is the claas name so class name start with capithal
+        'products' : Product.objects.all(), # HERE 'P' product is capital because product is the claas name so class name start with capithal letter.not
+        'search_bar' : True 
         
 
     }
@@ -23,7 +24,7 @@ def home(request):
 
 class productDetails(DetailView):
     model = Product
-    template_name = 'product_details.html'
+    template_name = 'product_details.html' 
 
 
 
@@ -59,3 +60,17 @@ class DeleteProduct(DeleteView):
     model = Product
     template_name = 'delete_product.html'
     success_url = '/'
+
+
+def searchView(request):
+    query = request.GET.get('search_text')
+
+    result_products = Product.objects.filter(name__icontains = query)
+    context =  {
+        'prods' : result_products,
+        'query' : query,
+        'search_bar' : True
+    }
+
+    template = loader.get_template('search_results.html')
+    return HttpResponse(template.render(context, request))
